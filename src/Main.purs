@@ -15,7 +15,7 @@ class WriteJSON a where
   writeJSON :: a -> String
 
 instance stringWriteJSON :: WriteJSON String where
-  writeJSON s = s
+  writeJSON s = "\"" <> s <> "\""
 
 instance intWriteJSON :: WriteJSON Int where
   writeJSON i = show i
